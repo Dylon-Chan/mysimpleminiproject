@@ -54,7 +54,7 @@ resource "aws_security_group" "my_security_group" {
 }
 
 resource "aws_instance" "Webserver-1" {
-  ami = "ami-0370d04afa44db778"  # Change this with the correct AMI 
+  ami = "ami-0310483fb2b488153"  # Change this with the correct AMI 
   instance_type = "t2.micro"
   key_name = "wengsiong-sydney-keypair"  # Use the name of existing keypair
   subnet_id = aws_subnet.my_subnet.id
@@ -66,7 +66,7 @@ resource "aws_instance" "Webserver-1" {
 }
 
 resource "aws_instance" "Webserver-2" {
-  ami = "ami-0370d04afa44db778"  # Change this with the correct AMI 
+  ami = "ami-0310483fb2b488153"  # Change this with the correct AMI 
   instance_type = "t2.micro"
   key_name = "wengsiong-sydney-keypair"  # Use the name of existing keypair
   subnet_id = aws_subnet.my_subnet.id
@@ -78,7 +78,7 @@ resource "aws_instance" "Webserver-2" {
 }
 
 resource "aws_instance" "Ansibleserver" {
-  ami = "ami-0370d04afa44db778"  # Change this with the correct AMI 
+  ami = "ami-0310483fb2b488153"  # Change this with the correct AMI 
   instance_type = "t2.micro"
   key_name = "wengsiong-sydney-keypair"  # Use the name of existing keypair
   subnet_id = aws_subnet.my_subnet.id
