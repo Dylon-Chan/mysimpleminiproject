@@ -16,6 +16,16 @@ resource "aws_subnet" "my_subnet" {
   }
 }
 
+resource "aws_route" "my_subnet_route" {
+  route_table_id         = aws_subnet.my_subnet.route_table_id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = aws_internet_gateway.my_igw.id
+}
+
+resource "aws_internet_gateway" "my_igw" {
+  vpc_id = aws_vpc.my_vpc.id
+}
+
 resource "aws_security_group" "my_security_group" {
   name = "WengSiong-SecurityGroup"
   vpc_id = aws_vpc.my_vpc.id
